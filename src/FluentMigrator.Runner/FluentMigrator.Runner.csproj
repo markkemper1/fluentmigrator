@@ -156,7 +156,6 @@
     <Compile Include="Generators\Postgres\PostgresGenerator.cs" />
     <Compile Include="Generators\Postgres\PostgresTypeMap.cs" />
     <Compile Include="Generators\SQLite\SqliteColumn.cs" />
-    <Compile Include="Generators\SQLite\SqliteQuoter.cs" />
     <Compile Include="Generators\SQLite\SqliteTypeMap.cs" />
     <Compile Include="Generators\SqlServer\SqlServer2000TypeMap.cs" />
     <Compile Include="Generators\SqlServer\SqlServer2005TypeMap.cs" />

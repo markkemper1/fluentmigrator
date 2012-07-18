@@ -4,13 +4,14 @@ using FluentMigrator.Model;
 using FluentMigrator.Runner.Generators.Base;
 using System.Collections.Generic;
 using System.Linq;
+using FluentMigrator.Runner.Generators.Generic;
 
 namespace FluentMigrator.Runner.Generators.SQLite
 {
     internal class SqliteColumn : ColumnBase
     {
         public SqliteColumn()
-            : base(new SqliteTypeMap(), new SqliteQuoter())
+            : base(new SqliteTypeMap(), new GenericQuoter())
         {
         }
 
