@@ -19,8 +19,8 @@ namespace FluentMigrator.Runner.Generators
         {
             SetTypeMap(DbType.Binary, "BLOB");
             SetTypeMap(DbType.Byte, "INTEGER");
-            SetTypeMap(DbType.Int16, "INTEGER");
-            SetTypeMap(DbType.Int32, "INTEGER");
+            SetTypeMap(DbType.Int16, "SMALLINT");
+            SetTypeMap(DbType.Int32, "INT");
             SetTypeMap(DbType.Int64, "INTEGER");
             SetTypeMap(DbType.SByte, "INTEGER");
             SetTypeMap(DbType.UInt16, "INTEGER");
@@ -28,8 +28,8 @@ namespace FluentMigrator.Runner.Generators
             SetTypeMap(DbType.UInt64, "INTEGER");
             SetTypeMap(DbType.Currency, "NUMERIC");
             SetTypeMap(DbType.Decimal, "NUMERIC");
-            SetTypeMap(DbType.Double, "NUMERIC");
-            SetTypeMap(DbType.Single, "NUMERIC");
+            SetTypeMap(DbType.Double, "REAL");
+            SetTypeMap(DbType.Single, "REAL");
             SetTypeMap(DbType.VarNumeric, "NUMERIC");
             SetTypeMap(DbType.AnsiString, "TEXT");
             SetTypeMap(DbType.String, "TEXT");
@@ -39,7 +39,7 @@ namespace FluentMigrator.Runner.Generators
             SetTypeMap(DbType.Date, "DATETIME");
             SetTypeMap(DbType.DateTime, "DATETIME");
             SetTypeMap(DbType.Time, "DATETIME");
-            SetTypeMap(DbType.Boolean, "INTEGER");
+            SetTypeMap(DbType.Boolean, "BOOLEAN");
             SetTypeMap(DbType.Guid, "UNIQUEIDENTIFIER");
         }
 
