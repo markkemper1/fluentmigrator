@@ -81,6 +81,18 @@ namespace FluentMigrator.Tests.Unit.Generators.SQLite
         }
 
         [Test]
+        public void CanCreateTableWithBooleanField()
+        {
+            var expression = new CreateTableExpression { TableName = GeneratorTestHelper.TestTableName1 };
+            expression.Columns.Add(new ColumnDefinition { Name = "BooleanColumnNull", Type = DbType.Boolean, IsNullable = true});
+            expression.Columns.Add(new ColumnDefinition { Name = "BooleanColumnNotNull", Type = DbType.Boolean });
+            var result = _generator.Generate(expression);
+
+            result.ShouldBe(
+                "CREATE TABLE \"TestTable1\" (\"BooleanColumnNull\" BOOLEAN, \"BooleanColumnNotNull\" BOOLEAN NOT NULL)");
+        }
+
+        [Test]
         public override void CanCreateTableWithDefaultValue()
         {
             var expression = GeneratorTestHelper.GetCreateTableWithDefaultValue();
